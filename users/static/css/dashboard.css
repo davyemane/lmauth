@@ -1,0 +1,319 @@
+.bg-image{
+    width: 90%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0.1;
+  }
+.row1{
+    z-index: -1;
+}
+
+/* pour les menu */
+.sidebar-link{
+    border-radius: 0px;
+    color: rgb(47, 46, 46);
+}
+.sidebar-item:hover{
+    border-radius: 0px;
+    background-color: transparent;
+    color: rgb(47, 46, 46);
+    
+}
+i{
+    color: rgb(123, 121, 121);
+}
+.hide-menu{
+    color: rgb(47, 46, 46);
+}
+.btn-hide-menu{
+    color: white;
+}
+.hide-menu:hover{
+    color: rgb(47, 46, 46);
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    .welcome{
+        display: none;
+    }
+    #setting-icon,#setting-settings{
+        display: none;
+    }
+    #green-line{
+        display: none;
+    }
+    p{
+        font-size: 11px;
+    }
+    #container-retour-rubrique{
+        margin-top: 12px;
+        font-size: 10px;
+    }
+}
+.sidebar-link{
+    text-align: end;
+    justify-content: end;
+}
+.sidebar-link:hover{
+    border-right: 4px solid #5AE083;
+    color: black;
+    font-weight: bold;
+}
+.app-header{
+    background-color: #5AE083;
+    height: 12vh;
+    box-shadow: 1px 7px 4px rgb(210, 210, 210);
+}
+#apprenant-image{
+    width: 32px;
+    border: none;
+}
+
+#username{
+    font-size: 90%;
+    color: white;
+}
+#welcome, #slogon{
+    color: white;
+}
+/* la bar de recherche */
+#search-bar{
+    width: 250px;
+    height: 5vh;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    background-color: #47bb6a;   
+}
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+/* container principal */
+#row1{
+    margin-top: 50px;
+}
+#main-container{
+    background-color: white;
+}
+#eyes{
+    background-color: transparent;
+    border: none;
+}
+#info-content{
+    height: 150px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+#container-langue{
+    border-radius: 12px;
+    box-shadow: 1px 4px 4px rgb(89, 87, 87);
+}
+#btn-passExamen{
+    padding: 1px;
+    width: 300px;
+    height: auto;
+    border-radius: 25px;
+    background-color: #5AE083;
+    color: white;
+}
+#conatainer-examen{
+    background-color: white;
+}
+#btn-add-verbe{
+    padding: 5px;
+    background-color: #5AE083;
+    border: none;
+    box-shadow: 1px 4px 4px gainsboro;
+    color: white;
+}
+#btn-see-conjug{
+    padding: 5px;
+    background-color: orange;
+    border: none;
+    box-shadow: 1px 4px 4px gainsboro;
+    color: white;
+    border-bottom-right-radius: 15px;
+}
+#btn-save-conjug,#btn-edit-conjug {
+    padding: 7px;
+    background-color: orange;
+    border: none;
+    box-shadow: 1px 4px 4px gainsboro;
+    color: white;
+    border-radius: 5px;
+}
+#btn-for_edit-conjug{
+    padding: 5px;
+    background-color: orange;
+    border: none;
+    box-shadow: 1px 5px 5px gainsboro;
+    color: white;
+    border-radius: 100%;
+}
+#btn-add-langue{
+    padding: 5px;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 5px 5px gainsboro;
+    color: white;
+    border-radius: 100%;
+}
+#btn-for_search-conjug{
+    padding: 5px;
+    background-color: white;
+    border: none;
+    box-shadow: 1px 5px 5px gainsboro;
+    color: white;
+    border-radius: 100%;
+}
+.card-body{
+    padding: 1px;
+}
+.form-control,.form-select{
+    border-radius: 15px;
+    box-shadow: 2px 4px 4px gainsboro;
+}
+.modal-header{
+    background-color: orange;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+/* le titre des modal en blanc */
+#modalAjoutVerbeLabel,#modalVoirConjugaisonLabel,#modalvoirVerbe{
+    color: white;
+}
+/* le container des verbes disponible */
+#container-verbe{
+    height: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+/* les container contenant la conjugaison dans un temps */
+.title-temps{
+    border-radius: 5px;
+    box-shadow: 1px 4px 4px rgb(121, 119, 119);
+}
+
+/* customizer l'audio */
+#pButton {
+  float: left;
+}
+
+.text-audio{
+color: white;
+}
+#timeline {
+  width: 90%;
+  height: 2px;
+  margin-top: 20px;
+  margin-left: 10px;
+  float: left;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  background: white;
+}
+
+#pButton {
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+#playhead {
+  width: 8px;
+  height: 8px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-top: -3px;
+  background: black;
+  cursor: pointer;
+}
+
+#btn-conversation{
+    padding: 0px;
+    border: 1px solid gainsboro;
+    width: 225px;
+    box-shadow: 2px 4px 4px gainsboro;
+    border-radius: 20px;
+    text-align: start;
+    background-color: white;
+}
+#img-communicate{
+    width: 45px;
+    height: auto;
+    box-shadow: 2px 4px 4px gainsboro;
+    border-radius: 100%;
+}
+.progress{
+    border-radius: 1px;
+    height: 1vh;
+}
+.progress-contain{
+    padding-top: 4px;
+    width: 500px;
+}
+#block-conjug1,#block-conjug2,#block-conjug3{
+    border-radius: 15px;
+    border: 1px solid gainsboro;
+    height: 400px;
+    box-shadow: 2px 4px 5px gainsboro;
+    display: none;
+
+}
+#main-container-conjug{
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 4px;
+    height: 70vh;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+.card{
+    border-radius: 15px;
+    box-shadow: 2px 4px 4px gainsboro;
+}
+.card-text{
+    padding: 8px;
+    text-align: justify;
+}
+.btn{
+    background-color: #5AE083;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+    height: auto;
+    box-shadow: 1px 2px 2px ghostwhite;
+    color: white;
+}
+.img-thumbnail{
+    background-color: transparent;
+    border: none;
+    width: 64px;
+}
+#myAudio{
+    width: 210px;
+    background-color: #5AE083;
+    border-radius: 25px;
+    color: white;
+    box-shadow: 2px 3px 3px gainsboro;
+}
+.icon-volume{
+    width: 32px;
+}

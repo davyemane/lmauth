@@ -1,0 +1,90 @@
+@media (max-width: 576px) {
+    .welcome{
+        display: none;
+    }
+    #setting-icon,#setting-settings{
+        display: none;
+    }
+    #green-line{
+        display: none;
+    }
+    p{
+        font-size: 11px;
+    }
+    #container-retour-rubrique{
+        margin-top: 12px;
+        font-size: 10px;
+    }
+    #carouselExampleIndicators{
+        display: none;
+    }
+    #main-container{
+        width: 100%;
+    }
+    #logo-lm-sign{
+        display: block;
+    }
+}
+@media (min-width: 992px) {
+    #logo-lm-sign{
+        display: none;
+    }
+}
+@media (max-width: 992px) {
+    #first-colon{
+        display: none;
+    }
+}
+
+#main-container{
+    height: 85vh;
+    background-color: transparent;
+}
+#btn-creerCompte{
+    padding: 4px;
+    border: none;
+    background-color: #5AE083;
+    color: white;
+}
+#btn-creerCompte{
+    padding: 10px;
+    width: 60%;
+    border: none;
+    border-radius: 0px;
+    background-color: #5AE083;
+    color: white;
+    box-shadow: 1px 2px 2px ghostwhite;
+}
+#first-line{
+    padding: 0px;
+}
+#first-colon{
+    background-color: orange;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 2px 4px 4px rgb(175, 175, 175);
+}
+#second-colon{
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 2px 4px 4px rgb(175, 175, 175);
+}
+.form-control{
+    border: none;
+    box-shadow: 2px 4px 4px gainsboro;
+}
+#trait1,#trait2{
+    border-bottom: 2px solid rgb(190, 188, 188);
+}
+#btn-google{
+    width: 400px;
+    border: 1px solid ghostwhite;
+    background-color: white;
+    box-shadow: 1px 4px 4px gainsboro;
+}
+.img-thumbnail{
+    text-align: center;
+    border: none;
+    width: 45px;
+}
