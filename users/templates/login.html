@@ -64,7 +64,7 @@
                     <div class="row">
                         <div class="col-11 justify-content-center p-5">
                             <div id="logo-lm-sign" class="row">
-                                <img src="{% static 'images/logo_lm.svg"' %}" alt="">
+                                <img src="{% static 'images/logo_lm.svg' %}" alt="">
                             </div>
                             <div class="row">
                                 <div class="col-12">
@@ -116,7 +116,7 @@
                                     </div>
                                 </form>
                                 <div class="container text-center justify-content-center pt-3 d-flex">
-                                    <a href="{% provider_login_url 'google' %}" id="btn-google" type="button" class="btn align-item-center">
+                                    <a href="{% provider_login_url 'google' %}?next" id="btn-google" type="button" class="btn align-item-center">
                                         <p>
                                             <img class="img-thumbnail" src="{% static 'images/google_logo.png' %}" alt="" srcset="">
                                             <span>Sign with Google</span>

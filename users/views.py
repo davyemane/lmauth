@@ -3,6 +3,7 @@ from django.core.validators import validate_email
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
+from .models import *
 
 
 def logins(request):
@@ -37,11 +38,15 @@ def logins(request):
 
     return render(request, "login.html", context)
 
+
+
 #fonction qui gere la connection 
 def signup(request):
     error = False
     massage= ""
     context ={ }
+
+    langues = Langue.objects.all()
 
 #icic on verifie si les données ont été bien envoyé et on les enregistre dans des variables 
     if request.method== "POST":
@@ -50,6 +55,8 @@ def signup(request):
         email = request.POST.get("email", None)
         password = request.POST.get("password", None)
         confirmPass = request.POST.get("confirmPass", None)
+        lang = request.POST.get("lang")
+
 
 # ici on verifie la validité de l'email
         try:
@@ -71,6 +78,7 @@ def signup(request):
 
 # ici on verifie si l'utilisateur existe deja         
         user = User.objects.filter(email=email).first()
+
         if user:
             error = True
             massage = f"Un compte existe deja avec l'email {email}!"
@@ -85,24 +93,35 @@ def signup(request):
                 is_active = True,
             )
 
+
             user.save()
 #on enregistre le mot de passe
             user.password= password
             user.set_password(user.password)
             user.save()
 
-            return redirect('homes')
+#on enregistre la langue
+            usr= User.objects.filter(email=email).first()
+            idU= usr.id
+            
+            print('teste', idU)
+            userln = UserLangue(
+                users_id = idU,
+                langue_id = lang
+            )
+            userln.save()
+
+
+        return redirect('homes')
             #print("=="*5 , "new post ", noms,email, password, confirmPass, "=="*5)
            
         
             
-             
+            
+         
 
-        context ={
-            'error':error,
-            'message': massage
-        }
-    return render(request, "signup.html", context)
+    return render(request,"signup.html",{'langues':langues,'error':error,'message': massage})
+
 
 def logout_view (request):
     logout(request)
@@ -110,6 +129,7 @@ def logout_view (request):
 
 @login_required(login_url='login')
 def homeStud (request):
-    return render(request, "dashboard_Apprenant.html")
+    langues = Langue.objects.all()
+    return render(request, "dashboard_Apprenant.html", {'langues':langues})
 
 # Create your views here.

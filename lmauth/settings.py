@@ -39,14 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'inscription',
-    "django.contrib.sites",
+    'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
 
 ]
-SITE_ID = 2
+SITE_ID = 3
 
 #SOCIALACCOUNT_PROVIDERS = {
    # 'google':{

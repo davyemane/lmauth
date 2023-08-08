@@ -14,7 +14,7 @@
     <!-- main container -->
     <div id="main-container" class="container mt-5">
         <!-- this container is for slide image -->
-        <div class="container">
+        <div class="container"> 
             <div id="first-line" class="row justify-content-between">
                 <div id="first-colon" class="col-lg-6">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -101,15 +101,19 @@
 
                                         <div class="container pt-3 d-block">
                                             <p>Email</p>
-                                            <input type="text" required class="form-control" name="email" id="" placeholder="email">
+                                            <input type="email" required class="form-control" name="email" id="" placeholder="email">
                                         </div>
 
                                         <div class="container pt-3 d-block">
                                             <p>Choix d'une langue</p>
-                                            <select id="" class="form-select">
-                                                <option value="" selected>Bulu</option>
-                                                <option value="">1</option>
-                                                <option value="">2</option>
+                                            <select id="" class="form-select" name="lang">
+
+                                                
+                                                {% for langs in langues %}
+                                                    <option value="{{langs.id_langue}}">{{langs.libelleLangue}}</option>
+
+                                                {% endfor %}
+                                                    
                                             </select>
                                         </div>
                                         <div class="row mt-3 justify-content-between">
